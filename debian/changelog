@@ -1,3 +1,9 @@
+tar (1.35+dfsg-5) unstable; urgency=medium
+
+  feat: db4 all security.usec_smodel attr.
+
+ -- zhangya <zhangya@uniontech.com>  Thu, 10 Jul 2025 22:44:10 +010
+
 tar (1.35+dfsg-3) unstable; urgency=medium
 
   [ Gianfranco Costamagna ]

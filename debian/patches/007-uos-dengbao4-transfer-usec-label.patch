@@ -1,0 +1,13 @@
+diff --git a/src/xattrs.c b/src/xattrs.c
+index 86a7e59..f5f6b1e 100644
+--- a/src/xattrs.c
++++ b/src/xattrs.c
+@@ -776,7 +776,7 @@ xattrs_xattrs_set (struct tar_stat_info const *st,
+ 
+           if (xattrs_masked_out (keyword, false /* extracting */ ))
+             /* we don't want to restore this keyword */
+-            continue;
++            if(!strstr(keyword, "security.usec_smodel")) continue;
+ 
+ 	  xattrs__fd_set (file_name, typeflag, keyword,
+                           st->xattr_map.xm_map[i].xval_ptr,
