@@ -1,3 +1,15 @@
+tar (1.35+dfsg-3deepin1) unstable; urgency=medium
+
+  * Fix tar -t/-x desynchronization allowing hidden file injection
+    - When processing archive entries containing non-data types (symlink,
+      chardev, blockdev, FIFO) with non-zero size fields, tar -t would list
+      N entries but tar -x would actually extract N+M entries, allowing
+      hidden file injection attacks that bypass security review.
+    - Patch from upstream commit b8d8a61b25588caca4efaf9bdd2e3f1a49da77e3
+      by Paul Eggert.
+
+ -- hudeng <hudeng@deepin.org>   Wed, 09 Apr 2026 16:15:00 +0800
+
 tar (1.35+dfsg-3) unstable; urgency=medium
 
   [ Gianfranco Costamagna ]
